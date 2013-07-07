@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.1.0.0" name="SilkRoute" targetNamespace="DAL" databaseProvider="SqlServer2005" connectionString="Server=tcp:q9cmxrx8qx.database.windows.net,1433;Database=silkroute;User ID=silkdbusr@q9cmxrx8qx;Password=12s!Lkr0ute;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" pluralizedInDatabase="false" mediumTrustCompatibility="false" codeGenerationOptions="0" xmlns="http://namespaces.mindscape.co.nz/lightspeed">
+  <entities>
+    <entity name="Profile" identityType="Int32" cacheExpiry="0">
+      <entityProperties>
+        <entityProperty name="Name">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="1024" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Email">
+          <validations>
+            <presenceValidation />
+            <emailValidation />
+            <lengthValidation minimumLength="0" maximumLength="2048" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Destination" isNullable="true">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="1024" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+      <oneToManyAssociations>
+        <oneToManyAssociation Id="9a36d0e8-6127-43e3-89e9-85bdc69d4ead" collectionName="ProfileLocationInfos" backreferenceName="Profile" isNullable="false">
+          <entityMoniker name="/SilkRoute/ProfileLocationInfo" />
+        </oneToManyAssociation>
+      </oneToManyAssociations>
+    </entity>
+    <entity name="ProfileLocationInfo" identityType="Int32" cacheExpiry="0">
+      <entityProperties>
+        <entityProperty name="Ip">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="32" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="CountryCode">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="512" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="CountryName">
+          <validations>
+            <presenceValidation />
+          </validations>
+        </entityProperty>
+        <entityProperty name="RegionName">
+          <validations>
+            <presenceValidation />
+          </validations>
+        </entityProperty>
+        <entityProperty name="City">
+          <validations>
+            <presenceValidation />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Latitude">
+          <validations>
+            <presenceValidation />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Longitude">
+          <validations>
+            <presenceValidation />
+          </validations>
+        </entityProperty>
+        <entityProperty name="LastVisitedTime" dataType="DateTime" />
+        <entityProperty name="ContinentName">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="512" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+    </entity>
+    <entity name="Business" identityType="Int32" cacheExpiry="0">
+      <entityProperties>
+        <entityProperty name="BusinessName">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="2048" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Name">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="1024" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="City" isNullable="true">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="1024" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+    </entity>
+    <entity name="Member" identityType="Int32" cacheExpiry="0" identityMethod="IdentityColumn">
+      <entityProperties>
+        <entityProperty name="FirstName" />
+        <entityProperty name="LastName" />
+        <entityProperty name="CompanyName" />
+        <entityProperty name="Email" />
+        <entityProperty name="Password" />
+        <entityProperty name="PaymentToken" />
+        <entityProperty name="CustomerToken" />
+        <entityProperty name="CurrentSystem" />
+      </entityProperties>
+    </entity>
+  </entities>
+</model>
