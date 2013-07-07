@@ -13,7 +13,7 @@
 
 		<meta property="og:title" content="Sillk - Simplified Travel And Expense Management For Business" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="http://www.iacquire.com/some-thumbnail.jpg" />
+		<meta property="og:image" content="http://www.iacquire.com/some-ssssthumbnail.jpg" />
 		<meta property="og:url" content="http://sillk.co" />
 		<meta property="og:description" content="Sillk is an affordable cloud-based solution that makes it fast and easy for employees to book business travel and track on the road expenses. Book flights, hotels, cars and manage your entire business travel itinerary in one place, reducing paper clutter and effortlessly syncing with your mobile device." />
 
@@ -22,7 +22,7 @@
 		<meta name="twitter:creator" content="@sillktravel">
 		<meta name="twitter:title" content="Sillk - Simplified Travel And Expense Management For Business">
 		<meta name="twitter:description" content="Sillk is an affordable cloud-based solution that makes it fast and easy for employees to book business travel and track on the road expenses. Book flights, hotels, cars and manage your entire business travel itinerary in one place, reducing paper clutter and effortlessly syncing with your mobile device.">
-		<meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-article.jpg">
+		<meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/ssss-span/19whitney-span-article.jpg">
 		
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -37,14 +37,44 @@
 
 		<div class="md-modal md-effect-16" id="modal-16">
 			<div class="md-content">
-				<h3>Register now for early access</h3>
+				<h3>Register Now For Early Access</h3>
 				<div>
 					<p>We're currently working with a limited number of partners. Please register below and we'll send you an invitation as soon as we can.</p>
 					
+					<p class="formspace">
+					<label for="firstname" class="labelspace">First Name</label> 
+						<input type="text" id="firstName" name="firstName" class="inputspace" /> 
+					</p>
 					
-					<!-- PATRICK ADD FORM FIELDS -->
+					<p class="formspace">	
+					<label for="lastname" class="labelspace">Last Name</label> 
+						<input type="text" id="lastName" name="lastName" class="inputspace" />
+					</p>
 					
-					<button class="md-close">Close me!</button>
+					<p class="formspace">
+					<label for="email" class="labelspace">Email Address</label> 
+							<input type="email" id="emailAddress" name="emailAddress" class="inputspace" />
+					</p>
+					
+					<p class="formspace">	
+					<label for="companyname" class="labelspace">Company Name</label> 
+							<input type="text" id="companyName" name="companyName" class="inputspace" />
+					</p>
+					
+					<p class="formspace selectspace">
+	                <label for "currentsystem" class="labelspace">Current System</label>
+	                    <select name="currentSystem">
+						  <option value="M">None</option>
+						  <option value="F">Concur</option>
+						  <option value="F">Carlson Wagonlit Travel</option>
+						  <option value="F">American Express Travel</option>
+						  <option value="F">Coupa</option>
+						  <option value="F">Egencia</option>
+						  <option value="F">Other</option>
+						</select>
+					</p>
+					<button class="md-close">Register</button>
+					<div class="clearfix"></div>
 				</div>
 			</div>
 		</div>

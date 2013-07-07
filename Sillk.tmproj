@@ -10,7 +10,7 @@
 			<key>filename</key>
 			<string>index.html</string>
 			<key>lastUsed</key>
-			<date>2013-07-04T05:04:34Z</date>
+			<date>2013-07-07T07:41:23Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -24,7 +24,7 @@
 			<key>filename</key>
 			<string>css/main.css</string>
 			<key>lastUsed</key>
-			<date>2013-07-04T05:04:32Z</date>
+			<date>2013-07-07T07:41:23Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -36,14 +36,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>206</integer>
+				<integer>363</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>516</integer>
+			<integer>336</integer>
 		</dict>
 		<key>css/normalize.css</key>
 		<dict>
@@ -64,14 +64,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>29</integer>
+				<integer>31</integer>
 				<key>line</key>
-				<integer>79</integer>
+				<integer>44</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>37</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -83,6 +83,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{1502, -251}, {1052, 778}}</string>
+	<string>{{2089, -202}, {1052, 778}}</string>
 </dict>
 </plist>
