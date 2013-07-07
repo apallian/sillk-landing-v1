@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -34,7 +34,16 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
+        <div class="md-modal md-effect-16" id="modal-2">
+        	<div class="md-content">
+                <h3>Thank you for register with us!</h3>
+                <div>
+                    <p>We'll send you an invitation very soon.</p>
+                    <button class="md-close">Close</button>
+                </div>
+        </div>
+        </div>
+        
 		<div class="md-modal md-effect-16" id="modal-16">
 			<div class="md-content">
 				<h3>Register Now For Early Access</h3>
@@ -73,7 +82,9 @@
 						  <option value="F">Other</option>
 						</select>
 					</p>
-					<button class="md-close">Register</button>
+					<button id="btnValidate" name="btnValidate">Submit</button>
+	                <!-- to toggle the modal windows" -->
+	                <button class="md-close" style="visibility:hidden;" id="btnSubmit" name="btnSubmit">Submit</button>	
 					<div class="clearfix"></div>
 				</div>
 			</div>
@@ -96,7 +107,8 @@
                         <p class="description">Introducing the most intuitive, smart &amp; powerful business travel and expense management platform that reinvents the way you book and manage business travel.</p>
 						<section>
 							<p>
-								<button class="btn md-trigger" data-modal="modal-16">Get Early Access</button>								
+								<button class="btn md-trigger" data-modal="modal-16">Get Early Access</button>		
+                                <button class="btn md-trigger" style="visibility:hidden;" data-modal="modal-2" id="btnThankYou" name="btnThankYou">Thank you</button>														
 							</p>
 						</section> 
 					</header>
@@ -116,7 +128,7 @@
 	<div class="md-overlay"></div><!-- the overlay element -->                   
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script>            window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
 
@@ -126,17 +138,19 @@
 
 
 			<script>
-				// this is important for IEs
-				var polyfilter_scriptpath = '/js/';
+			    // this is important for IEs
+			    var polyfilter_scriptpath = '/js/';
 			</script>
 			<script src="js/cssParser.js"></script>
 			<script src="js/css-filters-polyfill.js"></script>
 			
         <script>
-            var _gaq=[['_setAccount','UA-1553292-28'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+            var _gaq = [['_setAccount', 'UA-1553292-28'], ['_trackPageview']];
+            (function (d, t) {
+                var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g, s)
+            } (document, 'script'));
         </script>
     </body>
 </html>

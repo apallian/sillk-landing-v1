@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.1.0.0" absoluteBounds="0, 0, 11, 8.5" name="SilkRoute">
+  <modelMoniker name="/SilkRoute" />
+  <nestedChildShapes>
+    <entityShape Id="907766c6-57a9-4b19-b529-9d4b3324fd75" absoluteBounds="4.75, 1.875, 1.5, 1.0869042968750002">
+      <entityMoniker name="/SilkRoute/Profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14d9ae6c-4c29-4520-8ac4-ddfa30a4c982" absoluteBounds="4.765, 2.285, 1.4700000000000002, 0.576904296875" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+    <entityShape Id="761609b3-b485-4e71-b392-22653371ee42" absoluteBounds="7, 1.875, 1.5, 2.240712890625">
+      <entityMoniker name="/SilkRoute/ProfileLocationInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee2678ec-ec8e-4ef9-bc15-3be84c7df055" absoluteBounds="7.0150000000000006, 2.285, 1.4700000000000002, 1.730712890625" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+    <oneToManyAssociationConnector edgePoints="[(6.25 : 2.4184521484375); (7 : 2.4184521484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <oneToManyAssociationMoniker Id="9a36d0e8-6127-43e3-89e9-85bdc69d4ead" />
+      <relativeChildShapes />
+      <nodes>
+        <entityShapeMoniker Id="907766c6-57a9-4b19-b529-9d4b3324fd75" />
+        <entityShapeMoniker Id="761609b3-b485-4e71-b392-22653371ee42" />
+      </nodes>
+    </oneToManyAssociationConnector>
+    <entityShape Id="c547be4c-813f-420a-afb4-0da0cbac0b84" absoluteBounds="4.75, 3.125, 1.5, 1.0869042968750002">
+      <entityMoniker name="/SilkRoute/Business" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad10a36b-6cfa-4a14-b420-052223de156a" absoluteBounds="4.765, 3.535, 1.4700000000000002, 0.576904296875" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+    <entityShape Id="f6cb7fe6-3a93-4179-9a34-e5573485b00f" absoluteBounds="2.625, 1.875, 1.5, 2.0484114583333333">
+      <entityMoniker name="/SilkRoute/Member" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e76a40b-d8de-4420-a572-8440f446d618" absoluteBounds="2.64, 2.285, 1.4700000000000002, 1.5384114583333333" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+  </nestedChildShapes>
+</minimalLanguageDiagram>
