@@ -33,6 +33,7 @@ $(document).ready(function () {
     $('#LastName').alertShake();
     $('#EmailAddress').alertShake();
     $('#CompanyName').alertShake();
+    $('#CurrentSystem').alertShake();
     validateForm();
 });
 
@@ -42,7 +43,7 @@ Method: Validate MemberForm
 function validateForm() {
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
-    $('#btnValidate').click(function () {
+    $('#btnValidate').click(function (e) {
         var hasError = false;
 
         var firstNameVal = $('#FirstName')[0].value;
@@ -75,12 +76,19 @@ function validateForm() {
             hasError = true;
         }
 
+        var currentSystemVal = $("#CurrentSystem")[0].value;
+        if (currentSystemVal == 'SelectOne') {
+            $('#CurrentSystem').alertShake('start');
+            hasError = true;
+        }
+
         if (hasError) {
             return false; // exist
         }
         else {
             createMember();
-            $('#btnSubmit').click(); // Close modal window
+
+            //$('#btnSubmit').click(); // Close modal window
         }
     });
 }
@@ -101,8 +109,13 @@ function createMember() {
         },
         success: function (data) {
             l_memId = data.result;
+
+            // Add flip class to register planel
+            $('.register').addClass('flip');
+            e.preventDefault();
+
             //alert('mem id:' + l_memId);
-            $('#btnThankYou').click();
+            //$('#btnThankYou').click();
         },
         dataType: 'json',
         error: function (xhr, text, err) {

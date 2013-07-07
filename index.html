@@ -29,60 +29,139 @@
 		<link rel="shortcut icon" href="img/favicon.ico" />
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
+	<style type="text/css">
+
+		/* -- make sure to declare a default for every property that you want animated -- */
+		/* -- general styles, including Y axis rotation -- */
+		.panel .front {
+			float: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 900;
+			width: inherit;
+			height: inherit;
+			border: 1px solid #ccc;
+			background: #6b7077;
+			text-align: center;
+
+			-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+			-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+			box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+
+			-webkit-transform: rotateX(0deg) rotateY(0deg);
+			-webkit-transform-style: preserve-3d;
+			-webkit-backface-visibility: hidden;
+
+			-moz-transform: rotateX(0deg) rotateY(0deg);
+			-moz-transform-style: preserve-3d;
+			-moz-backface-visibility: hidden;
+
+			/* -- transition is the magic sauce for animation -- */
+			-o-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+		}
+		.panel.flip .front {
+			z-index: 900;
+			border-color: #eee;
+			background: #333;
+
+			-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+			
+			-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+			-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+			box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+		}
+		
+		.panel .back {
+			float: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 800;
+			width: inherit;
+			height: inherit;
+			border: 1px solid #ccc;
+			background: #333;
+			text-shadow: 1px  1px 1px rgba(0,0,0,0.6); 
+			
+			-webkit-transform: rotateY(-180deg);
+			-webkit-transform-style: preserve-3d;
+			-webkit-backface-visibility: hidden;
+
+			-moz-transform: rotateY(-180deg);
+			-moz-transform-style: preserve-3d;
+			-moz-backface-visibility: hidden;
+
+			/* -- transition is the magic sauce for animation -- */
+			-o-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+		}
+		
+		.panel.flip .back {
+			z-index: 1000;
+			background: #80868d;
+
+			-webkit-transform: rotateX(0deg) rotateY(0deg);
+			-moz-transform: rotateX(0deg) rotateY(0deg);
+
+			box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+			-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+			-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+		}
+		
+	</style>
+
+
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-        <div class="md-modal md-effect-16" id="modal-2">
-        	<div class="md-content">
-                <h3>Thank you for register with us!</h3>
-                <div>
-                    <p>We'll send you an invitation very soon.</p>
-                    <button class="md-close">Close</button>
-                    <button class="btn md-trigger" style="visibility:hidden;" data-modal="modal-2" id="btnThankYou" name="btnThankYou">Thank you</button>														
-
-                </div>
-        </div>
-        </div>
-        
 		<div class="md-modal md-effect-16" id="modal-16">
 			<div class="md-content">
-				<h3>Register Now For Early Access</h3>
+                <div class="register panel">
+		        <div class="front">
+				<h3>
+                Register Now For Early Access</h3>
 				<div>
 					<p>We're currently working with a limited number of partners. Please register below and we'll send you an invitation as soon as we can.</p>
 					
 					<p class="formspace">
 					<label for="firstname" class="labelspace">First Name</label> 
-						<input type="text" id="firstName" name="firstName" class="inputspace" /> 
+						<input type="text" id="FirstName" name="FirstName" class="inputspace" /> 
 					</p>
 					
 					<p class="formspace">	
 					<label for="lastname" class="labelspace">Last Name</label> 
-						<input type="text" id="lastName" name="lastName" class="inputspace" />
+						<input type="text" id="LastName" name="LastName" class="inputspace" />
 					</p>
 					
 					<p class="formspace">
 					<label for="email" class="labelspace">Email Address</label> 
-							<input type="email" id="emailAddress" name="emailAddress" class="inputspace" />
+							<input type="email" id="EmailAddress" name="EmailAddress" class="inputspace" />
 					</p>
 					
 					<p class="formspace">	
 					<label for="companyname" class="labelspace">Company Name</label> 
-							<input type="text" id="companyName" name="companyName" class="inputspace" />
+							<input type="text" id="CompanyName" name="CompanyName" class="inputspace" />
 					</p>
 					
 					<p class="formspace selectspace">
-	                <label for "currentsystem" class="labelspace">Current System</label>
-	                    <select name="currentSystem">
-						  <option value="M">None</option>
-						  <option value="F">Concur</option>
-						  <option value="F">Carlson Wagonlit Travel</option>
-						  <option value="F">American Express Travel</option>
-						  <option value="F">Coupa</option>
-						  <option value="F">Egencia</option>
-						  <option value="F">Other</option>
+	                <label for "CurrentSystem" class="labelspace">Current System</label>
+	                    <select name="CurrentSystem" id="CurrentSystem">
+                          <option value="SelectOne">Please Select One</option>
+						  <option value="None">None</option>
+						  <option value="Concur">Concur</option>
+						  <option value="Carlson Wagonlit Travel">Carlson Wagonlit Travel</option>
+						  <option value="American Express Travel">American Express Travel</option>
+						  <option value="Coupa">Coupa</option>
+						  <option value="Egencia">Egencia</option>
+						  <option value="Other">Other</option>
 						</select>
 					</p>
 					<button id="btnValidate" name="btnValidate">Submit</button>
@@ -90,6 +169,21 @@
 	                <button class="md-close" style="visibility:hidden;" id="btnSubmit" name="btnSubmit">Submit</button>	
 					<div class="clearfix"></div>
 				</div>
+
+                </div>
+                </div>
+                
+                <div class="back" id="register">
+                    <div class="pad">
+                        <h3>
+                            Thank you for register with us!</h3>
+                        <div>
+                            <p>
+                                We'll send you an invitation very soon.</p>
+                            <button class="btn" onclick="$('#btnSubmit').click();">Close</button>
+                        </div>
+                    </div>
+                </div>
 			</div>
 		</div>
 		
