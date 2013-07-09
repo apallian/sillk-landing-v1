@@ -10,7 +10,7 @@
 			<key>filename</key>
 			<string>index.html</string>
 			<key>lastUsed</key>
-			<date>2013-07-07T07:41:23Z</date>
+			<date>2013-07-09T00:18:47Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -18,13 +18,13 @@
 			<key>filename</key>
 			<string>css/normalize.css</string>
 			<key>lastUsed</key>
-			<date>2013-07-04T05:04:34Z</date>
+			<date>2013-07-07T23:02:45Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>css/main.css</string>
 			<key>lastUsed</key>
-			<date>2013-07-07T07:41:23Z</date>
+			<date>2013-07-09T00:18:47Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -36,14 +36,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>18</integer>
 				<key>line</key>
-				<integer>363</integer>
+				<integer>534</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>336</integer>
+			<integer>513</integer>
 		</dict>
 		<key>css/normalize.css</key>
 		<dict>
@@ -57,21 +57,21 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>13</integer>
+			<integer>0</integer>
 		</dict>
 		<key>index.html</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>31</integer>
+				<integer>51</integer>
 				<key>line</key>
-				<integer>44</integer>
+				<integer>24</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>37</integer>
+			<integer>9</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -83,6 +83,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{2089, -202}, {1052, 778}}</string>
+	<string>{{2211, -140}, {1052, 778}}</string>
 </dict>
 </plist>
